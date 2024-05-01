@@ -14,7 +14,8 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedMethods("*")
                 .allowedOrigins(
-                        "http://localhost:3000"
+                        "http://localhost:3000",
+                        "https://findingfood-spots-project-8p5kafurw-annas-hossains-projects.vercel.app"
                 );
     }
 
