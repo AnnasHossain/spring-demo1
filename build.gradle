@@ -1,10 +1,6 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.0.5' {
-		jar {
-			classifier = '' // Set classifier to an empty string
-		}
-	}
+	id 'org.springframework.boot' version '3.0.5'
 	id 'io.spring.dependency-management' version '1.1.0'
 }
 
@@ -27,3 +23,11 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+/*
+artifacts {
+	archives {
+		// Exclude plain JAR artifact
+		exclude('*.plain.jar')
+	}
+}*/
