@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 //import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
-//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://findingfood-spots-project.vercel.app")
 @RestController
 public class NutzerController {
 

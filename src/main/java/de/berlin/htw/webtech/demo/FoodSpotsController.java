@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.net.URISyntaxException;
 import java.util.List;
-
+@CrossOrigin(origins = "https://findingfood-spots-project.vercel.app")
 @RestController
 public class FoodSpotsController {
 
