@@ -15,7 +15,7 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowedMethods("*")
                 .allowedOrigins(
                         "http://localhost:3000",
-                        "https://findingfood-spots-project-annas-hossains-projects.vercel.app"
+                        "**https://findingfood-spots-project.vercel.app**"
                 );
     }
 
