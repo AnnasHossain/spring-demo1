@@ -10,6 +10,7 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 @CrossOrigin(origins = "https://findingfood-spots-project.vercel.app")
+// @CrossOrigin(origins = "*") // für dev Zwecke
 @RestController
 public class FoodSpotsController {
 
@@ -37,24 +38,23 @@ public class FoodSpotsController {
         return service.getAll();
     }
 
-   /* @PutMapping("/FoodSpotsList/{id}")
+    @PutMapping("/FoodSpotsList/{id}")
     public ResponseEntity<FoodSpots> updateFoodSpot(@PathVariable String id, @RequestBody FoodSpots foodSpots) {
         Long FoodSpotId = Long.parseLong(id);
         FoodSpots existingFoodSpot = service.get(FoodSpotId);
 
         if (existingFoodSpot != null) {
             existingFoodSpot.setName(foodSpots.getName());
-            existingFoodSpot.setDescription(foodSpots.getDescription());
+            // existingFoodSpot.setDescription(foodSpots.getDescription());
             // Update other properties as needed
 
-            FoodSpots updatedFoodSpot = service.save(existingFoodSpot);
+            FoodSpots updatedFoodSpot = service.update(FoodSpotId, existingFoodSpot);
             return ResponseEntity.ok(updatedFoodSpot);
         } else {
             return ResponseEntity.notFound().build();
         }
     }
 
-*/
    @DeleteMapping(path = "/FoodSpotsList/{id}")
    public ResponseEntity<Void> deleteFoodSpot(@PathVariable Long id) {
        boolean successful = service.deleteById(id);

@@ -34,4 +34,8 @@ public class FoodSpotService {
         return true;
     }
 
+    public FoodSpots update(Long id, FoodSpots updated) {
+        return repo.save(updated);
+    }
+
 }
