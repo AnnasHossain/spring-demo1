@@ -17,7 +17,6 @@ public class FoodSpotsController {
     @Autowired
     FoodSpotService service;
 
-
     Logger logger = LoggerFactory.getLogger(FoodSpotsController.class);
 
     @PostMapping("/FoodSpotsList")
